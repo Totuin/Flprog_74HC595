@@ -1,6 +1,4 @@
 #pragma once
-#include <stdint.h>
-#include <math.h>
 #include "Arduino.h"
 #include "flprogUtilites.h"
 #include "flprogSPI.h"
@@ -15,12 +13,10 @@ public:
     void pool();
 
 private:
-
-bool isReady();
+    bool isReady();
     AbstractFLProgSPI *spi;
     uint16_t pin;
     uint8_t *chips;
     uint8_t chipSize = 0;
     bool isNeedSend = true;
-    
 };
